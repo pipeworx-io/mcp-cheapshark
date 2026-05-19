@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/cheapshark",
+  "title": "Cheapshark",
+  "description": "PC game deals across Steam/Epic/GOG/Humble via CheapShark. Keyless.",
+  "version": "0.1.0",
+  "websiteUrl": "https://pipeworx.io/packs/cheapshark",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-cheapshark",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/cheapshark/mcp"
+    }
+  ]
+}
