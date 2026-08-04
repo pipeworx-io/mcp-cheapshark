@@ -1,15 +1,21 @@
-# mcp-cheapshark
+# @pipeworx/cheapshark
 
-CheapShark MCP.
+[CheapShark](https://apidocs.cheapshark.com/) MCP — PC game price tracking across Steam/Epic/GOG/Humble/etc. Keyless.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| `deals` | Search deals across stores. |
-| `games` | Game lookup. |
+- `deals(storeID?, pageNumber?, pageSize?, sortBy?, desc?, lowerPrice?, upperPrice?, metacritic?, steamRating?, steamAppID?, title?, exact?, AAA?, steamworks?, onSale?, output?)` — search deals
+- `deal(id)` — single deal detail
+- `stores()` — list stores
+- `games(title, limit?, steamAppID?, exact?)` — game lookup
+- `game(id)` — game details
+- `alerts_manage(...)` — _omitted (requires user email + tokens)_
+
+## Data source
+
+`https://www.cheapshark.com/api/1.0`
 
 ## Quick Start
 
@@ -25,7 +31,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -49,7 +55,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
