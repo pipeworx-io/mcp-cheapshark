@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-cheapshark",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "CheapShark MCP.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-69a91e13658b8e68b4afe64afc0750aecc767f05d94ae98352523a50daacfcd8",
-    "sourceCommit": "60f04b68c347e970c6be94a53439d1364061fc06"
+    "sourceHash": "v1-aa04c2204f2838c6249ad7831323b7ba43e2df6d6e33b4d2015bb2d68a88dcf9",
+    "sourceCommit": "babdd280d475dceddecc9ebf8f2a661712781a81"
   }
 }
