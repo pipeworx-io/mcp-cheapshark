@@ -1,0 +1,121 @@
+[
+  {
+    "name": "deals",
+    "description": "Search PC game deals across digital stores (Steam, GOG, Humble, etc.) filtered by store, price range, Metacritic score, Steam rating, title, or sale status; returns deal ID, sale price, normal price, savings %, and store.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "storeID": {
+          "type": "string",
+          "description": "Comma-sep store IDs. See stores()."
+        },
+        "pageNumber": {
+          "type": "number"
+        },
+        "pageSize": {
+          "type": "number"
+        },
+        "sortBy": {
+          "type": "string",
+          "description": "DealRating | Title | Savings | Price | Metacritic | Reviews | Release | Store | Recent. Already returns BEST-first for the field you pick (biggest Savings, highest Metacritic, cheapest Price) — you do NOT need `desc` to get the top results."
+        },
+        "desc": {
+          "type": "boolean",
+          "description": "Reverse the default best-first order — i.e. WORST first (smallest savings, lowest Metacritic, most expensive). Leave unset for top results; sending true is almost never what you want."
+        },
+        "lowerPrice": {
+          "type": "number"
+        },
+        "upperPrice": {
+          "type": "number"
+        },
+        "metacritic": {
+          "type": "number"
+        },
+        "steamRating": {
+          "type": "number"
+        },
+        "steamAppID": {
+          "type": "number"
+        },
+        "title": {
+          "type": "string"
+        },
+        "exact": {
+          "type": "boolean"
+        },
+        "AAA": {
+          "type": "boolean"
+        },
+        "steamworks": {
+          "type": "boolean"
+        },
+        "onSale": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  {
+    "name": "deal",
+    "description": "Single deal detail.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "stores",
+    "description": "List supported stores.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "games",
+    "description": "Look up a PC game by title (or steamAppID) across CheapShark's catalog; returns the game's cheapest current deal, cheapest historical price, and list of active deal IDs across stores.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "number"
+        },
+        "steamAppID": {
+          "type": "number"
+        },
+        "exact": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "title"
+      ]
+    }
+  },
+  {
+    "name": "game",
+    "description": "Fetch full deal and price-history details for a single CheapShark game by its numeric game ID; returns all active store deals, cheapest price ever, and Steam rating info.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  }
+]
