@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-cheapshark",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "CheapShark MCP.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "cheapshark",
     "gatewaySlug": "cheapshark",
-    "sourceHash": "v1-f9f2cd7648c35e4ff2f1f4ae9301cfe8d7073608de7a0eaa1d8ef0d078cd6473",
-    "sourceCommit": "4277282d72f9bf55e548b3799aaf737baf22152f"
+    "sourceHash": "v1-eb1c67895358440ab0fb6c57e62cd73716c091aff9e402a6ef570ddd65353551",
+    "sourceCommit": "547a3983b42dacf4389ca474860b0a1dee8e6053"
   }
 }
